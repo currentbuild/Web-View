@@ -1,0 +1,442 @@
+@font-face {
+  font-family: 'NIISans';
+  src: url('../fonts/NIISans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NIISans';
+  src: url('NIISans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NIISansBold';
+  src: url('NIISans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NIISansLight';
+  src: url('NIISansLight.woff') format('woff');
+  font-weight: light;
+  font-style: normal;
+}
+
+
+br.quebra-h1 {
+  display: none;
+}
+
+br.quebra-h2 {
+  display: none;
+}
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'NIISans';
+  height: 100vh;
+}
+
+h1 {
+  color: #ff5a00;
+  margin-top: 35px;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-size: 22px;
+}
+
+input {
+  font-family: 'NIISans';
+}
+
+input[type="tel"] {
+  color: #9e9e9e;
+  font-size: 11px;
+  border: solid;
+  border-radius: 6px;
+  border-width: 1px;
+  border-color: #ff5a00;
+  min-height: 32px;
+}
+
+input[type="text"] {
+  color: #9e9e9e;
+  font-size: 11px;
+  border: solid;
+  border-radius: 6px;
+  border-width: 1px;
+  border-color: #ff5a00;
+  min-height: 32px;
+}
+
+input[type="button"] {
+  box-sizing: border-box;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: white;
+  height: 35px;
+  background-color: #ff5a00;
+  border: none;
+  border-radius: 6px;
+  padding: 0 20px 0 20px;
+}
+
+input[type="button"].btn-secundario {
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  background-color: #9e9e9e;
+}
+
+header.hero {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 300px;
+  background-image: url('../img/banner-nextel-md.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30% 50%;
+}
+
+.overlay {
+  flex: auto;
+}
+
+.overlay>svg {
+  height: 100%;
+}
+
+.acesso {
+  box-sizing: border-box;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-top: 35px;
+}
+
+.form-acesso {
+  display: flex;
+}
+
+.campo-numero-nextel {
+  margin-right: 10px;
+  padding-left: 8px;
+  flex: 3;
+}
+
+.campo-codigo-acesso {
+  padding-left: 8px;
+  flex: 2;
+}
+
+.btn-entrar {
+  width: 100%;
+}
+
+.sem-codigo {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-content: center;
+  align-items: stretch;
+  margin-top: 20px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.sem-codigo h2 {
+  margin: 0;
+  margin-right: 10px;
+  font-size: .66rem;
+  flex: 2;
+}
+
+input[type="button"].btn-enviar {
+  background-color: #9e9e9e;
+  letter-spacing: normal;
+  text-transform: none;
+  flex: 1;
+}
+
+footer {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+  position: relative;
+}
+
+/* rodapé no fundo */
+
+/* footer {
+  position: absolute;
+  bottom: 0;
+} */
+
+.divisoria {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #9c9c9c;
+}
+
+.ilu-celular {
+  flex: inherit;
+  width: 70px;
+}
+
+.nextel-logo {
+  flex: inherit;
+  width: 120px;
+  align-self: flex-end;
+  margin-bottom: 8px;
+}
+
+.legal {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  color: #6e6e6e;
+}
+
+.nextel-x {
+  flex: inherit;
+  width: 32px;
+}
+
+.copyright {
+  font-size: 12px;
+  flex: auto;
+  margin-left: 10px;
+}
+
+/* QUERIES RESPONSIVAS */
+
+@media screen and (max-width: 539px) {
+
+  br.quebra-h1 {
+    display: inline-block;
+  }
+  .btn-entrar {
+    margin-top: 10px;
+  }
+
+  .sem-codigo {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 540px) {
+
+  footer {
+    margin-top: 20px;
+  }
+  .acesso {
+    display: flex;
+  }
+
+  /* FORM = CONTENDO OS DOIS CAMPOS */
+  .form-acesso {
+    margin-right: 10px;
+    flex: 4;
+  }
+
+  .campo-numero-nextel {
+    flex: 3;
+  }
+
+  .campo-codigo-acesso {
+    flex: 2;
+  }
+
+  .btn-entrar {
+    width: unset;
+    flex: 1;
+  }
+
+  .sem-codigo {
+    display: flex;
+  }
+
+  .sem-codigo h2 {
+    font-size: 1rem;
+    flex: 4;
+  }
+
+  .btn-enviar {
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  /* body {
+    height: 100vh;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+  } */
+
+  .form-acesso {
+    margin-right: unset;
+    flex: 4;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .wrapper-laptop-up {
+    display: block;
+    text-align: center;
+    align-items: center;
+  }
+
+  .acesso, .sem-codigo {
+    display: block;
+    margin-top: unset;
+  }
+
+  .acesso {
+    margin: auto;
+    margin-top: 25px;
+    width: 300px;
+  }
+
+  .btn-entrar {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  br.quebra-h2 {
+    display: inline-block;
+  }
+
+  .sem-codigo {
+    margin-top: 25px;
+  }
+
+  .btn-enviar {
+    margin-top: 10px;
+  }
+}
+
+  /* EXCLUSIVO PARA A IMAGEM DA CAPA */
+
+  @media screen and (min-width: 790px) {
+    header.hero {
+      background-position: 50% 34%;
+    }
+  }
+
+/* @media screen and (min-width: 1367px) {
+  header.hero {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  header.hero {
+    background-position: 50% 35%;
+  }
+
+  .acesso{
+    display: block;
+    text-align: center;
+  }
+
+  .form-acesso {
+    margin-top: 20px;
+    display: inline-block;
+  }
+
+  .sem-codigo {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+  }
+
+  .sem-codigo h2 {
+    display: inline-block;
+  }
+
+  .btn-secundario {
+    display: inline-block;
+  }
+
+  .form-acesso input[type="button"] {
+    margin-right: 0;
+  }
+  .divisoria {
+    align-items: center;
+  }
+
+  .ilu-celular {
+    max-width: 130px;
+  }
+
+  .nextel-logo {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  header.hero {
+    background-position: 25% 50%;
+  }
+
+  .form-acesso {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input {
+    max-width: none;
+    min-width: inherit;
+  }
+
+  .form-acesso>input {
+    margin-right: 0;
+    width: 40%;
+}
+
+  .form-acesso input[type="tel"] {
+    min-width: unset;
+    width: 60%;
+    margin-right: 10px;
+  }
+
+  .acesso input[type="button"] {
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  footer {
+    display: block;
+    position: relative;
+  }
+
+  .ilu-celular
+  {
+    width: 50px;
+  }
+
+  .nextel-logo {
+    flex: none;
+    width: 120px;
+    align-self: flex-end;
+    margin-bottom: 10px;
+  }
+} */
